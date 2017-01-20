@@ -1,0 +1,14 @@
+package selenium;
+import java.io.File;
+public class listfilewithspecificextension {
+
+	public static void main(String a[]){
+		File file = new File("D:/Javaseleniumworld.txt");
+		File[] files = file.listFiles();
+		for(File f: files){
+		if(f.getName().toLowerCase().endsWith(".zip")){
+		System.out.println(f.getName());
+		}
+		}
+	}
+}

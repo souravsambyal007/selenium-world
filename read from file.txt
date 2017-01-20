@@ -1,0 +1,26 @@
+package selenium;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+public class readfile {
+
+	public static void main(String a[]) {
+		BufferedReader br = null;
+		String strLine = "";
+		try {
+		br = new BufferedReader( new FileReader("D:/Javaseleniumworld.txt"));
+		while( (strLine = br.readLine()) != null){
+		System.out.println(strLine);
+		}
+		} catch (FileNotFoundException e) {
+		System.err.println("Unable to find the file");
+		} catch (IOException e) {
+		System.err.println("Unable to read the file");
+		
+		// TODO Auto-generated method stub
+
+	}
+
+}
+}
